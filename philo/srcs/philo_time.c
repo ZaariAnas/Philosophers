@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   philo_time.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azari <azari@student.1337.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/13 11:41:41 by azari             #+#    #+#             */
-/*   Updated: 2023/06/17 15:38:18 by azari            ###   ########.fr       */
+/*   Created: 2023/06/13 18:07:12 by azari             #+#    #+#             */
+/*   Updated: 2023/06/17 15:17:24 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../philo.h"
 
-int main(int ac, char **av)
+unsigned int	ft_gettime(void)
 {
-	t_data	*data;
-	t_philo	**philos;
+	struct timeval t;
 
-	if (ac == 5 || ac == 6)
-	{
-		if (!ft_checkargs(av))
-			return (ft_error(ARG_ERR));
-		data = malloc(sizeof(t_data));
-		if (!data)
-			return (ft_error(ALLOC_ERR));
-		ft_datainit(data, av);
-		philos = ft_philoinit(data);
-		if (!philos)
-			return (ft_error(ALLOC_ERR));
-	}
-	else
-		return (ft_error(ARG_NUM_ERR));
+	if (gettimeofday(&t, NULL))
+		return (0);
+	return ((t.tv_sec * 1000) + (t.tv_usec / 1000));
 }

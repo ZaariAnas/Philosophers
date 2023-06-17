@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.c                                            :+:      :+:    :+:   */
+/*   philo_thread.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azari <azari@student.1337.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/13 11:41:41 by azari             #+#    #+#             */
-/*   Updated: 2023/06/17 15:38:18 by azari            ###   ########.fr       */
+/*   Created: 2023/06/13 18:23:06 by azari             #+#    #+#             */
+/*   Updated: 2023/06/13 18:23:29 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../philo.h"
 
-int main(int ac, char **av)
-{
-	t_data	*data;
-	t_philo	**philos;
+// this file has all about threads
 
-	if (ac == 5 || ac == 6)
-	{
-		if (!ft_checkargs(av))
-			return (ft_error(ARG_ERR));
-		data = malloc(sizeof(t_data));
-		if (!data)
-			return (ft_error(ALLOC_ERR));
-		ft_datainit(data, av);
-		philos = ft_philoinit(data);
-		if (!philos)
-			return (ft_error(ALLOC_ERR));
-	}
-	else
-		return (ft_error(ARG_NUM_ERR));
-}
