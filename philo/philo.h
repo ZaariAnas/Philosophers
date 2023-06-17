@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.1337.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 11:42:23 by azari             #+#    #+#             */
-/*   Updated: 2023/06/17 15:33:32 by azari            ###   ########.fr       */
+/*   Updated: 2023/06/17 20:57:11 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PHILO_H
 
 # define ARG_NUM_ERR "\033[0;31merror :: unvalid number of arguments.\n"
+# define THRD_CREAT_ERR "\033[0;31merror :: thread creation failure.\n"
+# define THRD_DTCH_ERR "\033[0;31merror :: thread detaching failure.\n"
 # define ALLOC_ERR "\033[0;31merror :: memory allocation failure. \n"
 # define ARG_ERR "\033[0;31merror :: unvalid arguments.\n"
 # define WHITESPACES " \t\r\v\n"

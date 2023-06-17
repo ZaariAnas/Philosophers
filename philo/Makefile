@@ -6,7 +6,7 @@
 #    By: azari <azari@student.1337.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/13 12:40:48 by azari             #+#    #+#              #
-#    Updated: 2023/06/17 14:49:30 by azari            ###   ########.fr        #
+#    Updated: 2023/06/17 19:21:26 by azari            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ OBJS 		= 	$(addsuffix .o, $(FILE))
 
 %.o : %.c $(HEADER) 
 	@echo "$(PURPLE) ⏳ Setup ongoing ⏳ ..."
-	@$(CC) $(CFLAGS) -c -o $@ $< 
+	@$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(NAME)
 

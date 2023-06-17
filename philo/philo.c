@@ -6,7 +6,7 @@
 /*   By: azari <azari@student.1337.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 11:41:41 by azari             #+#    #+#             */
-/*   Updated: 2023/06/17 15:38:18 by azari            ###   ########.fr       */
+/*   Updated: 2023/06/17 20:01:01 by azari            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main(int ac, char **av)
 		philos = ft_philoinit(data);
 		if (!philos)
 			return (ft_error(ALLOC_ERR));
+		ft_run(philos);
 	}
 	else
 		return (ft_error(ARG_NUM_ERR));
